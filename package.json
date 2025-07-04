@@ -1,0 +1,38 @@
+{
+  "name": "retroui-vue",
+  "version": "0.0.1",
+  "description": "A UI Library, powered by Vue & Tailwind CSS",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fzzv/retroui-vue.git"
+  },
+  "homepage": "https://retro.xyu.fan",
+  "type": "module",
+  "main": "./dist/index.js",
+  "scripts": {
+    "dev": "pnpm run -r dev"
+  },
+  "keywords": [
+    "ui",
+    "vue",
+    "vue3",
+    "retro",
+    "components",
+    "components library"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "author": "fzzv",
+  "license": "MIT",
+  "packageManager": "pnpm@10.12.4",
+  "dependencies": {
+    "typescript": "^5.8.3",
+    "vue": "^3.5.17"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "better-sqlite3"
+    ]
+  }
+}
