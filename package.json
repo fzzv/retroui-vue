@@ -21,10 +21,18 @@
   ],
   "main": "./dist/index.js",
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "scripts": {
-    "dev": "pnpm run -r dev"
+    "dev": "pnpm run -r dev",
+    "docs": "pnpm --filter docs run dev",
+    "playground": "pnpm run --filter playground dev",
+    "build": "rimraf dist  && pnpm run build",
+    "build-only": "rimraf dist  && pnpm run -r build-only",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "vue-tsc --noEmit",
+    "postinstall": "npx simple-git-hooks"
   },
   "dependencies": {
     "typescript": "^5.8.3",
@@ -33,11 +41,21 @@
   "devDependencies": {
     "@antfu/eslint-config": "^4.16.2",
     "eslint": "^9.30.1",
-    "eslint-plugin-format": "^1.0.1"
+    "eslint-plugin-format": "^1.0.1",
+    "lint-staged": "^16.1.2",
+    "rimraf": "^6.0.1",
+    "simple-git-hooks": "^2.13.0",
+    "vue-tsc": "^2.2.12"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
       "better-sqlite3"
     ]
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*.{ts,vue}": "eslint --fix"
   }
 }

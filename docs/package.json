@@ -1,9 +1,10 @@
 {
-  "name": "nuxt-app",
+  "name": "docs",
   "type": "module",
   "private": true,
   "scripts": {
     "build": "nuxt build",
+    "build-only": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
