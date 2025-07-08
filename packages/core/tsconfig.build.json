@@ -7,11 +7,12 @@
     "lib": ["esnext", "dom"],
     "baseUrl": ".",
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "paths": {
       "@/*": ["src/*"]
     },
     "resolveJsonModule": true,
+    "allowImportingTsExtensions": true,
     "strict": true,
     "declaration": false,
     "outDir": "dist",

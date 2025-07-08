@@ -4,24 +4,25 @@
   "compilerOptions": {
     "target": "esnext",
     "jsx": "preserve",
-    "lib": [
-      "esnext",
-      "dom"
-    ],
+    "lib": ["esnext", "dom"],
     "baseUrl": ".",
-    "module": "esnext",
-    "moduleResolution": "node",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
     "paths": {
       "@/*": [
         "src/*"
       ]
     },
     "resolveJsonModule": true,
+    "allowArbitraryExtensions": true,
+    "allowImportingTsExtensions": false,
     "strict": true,
     "declaration": false,
     "outDir": "dist",
     "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true
   },
   "include": ["src/**/*", "src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
