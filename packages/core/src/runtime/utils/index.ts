@@ -25,3 +25,19 @@ export function get(object: Record<string, any> | undefined, path: (string | num
 
   return result !== undefined ? result : defaultValue
 }
+
+/**
+ * 从对象中选择指定的属性
+ * @param data 对象
+ * @param keys 属性列表
+ * @returns 选择后的对象
+ */
+export function pick<Data extends object, Keys extends keyof Data>(data: Data, keys: Keys[]): Pick<Data, Keys> {
+  const result = {} as Pick<Data, Keys>
+
+  for (const key of keys) {
+    result[key] = data[key]
+  }
+
+  return result
+}

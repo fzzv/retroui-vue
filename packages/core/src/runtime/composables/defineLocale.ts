@@ -1,5 +1,5 @@
-import type { Direction, Locale } from '@/types/locale'
-import type { DeepPartial } from '@/types/utils'
+import type { Direction, Locale } from '../types/locale'
+import type { DeepPartial } from '../types/utils'
 import { defu } from 'defu'
 
 interface DefineLocaleOptions<M> {

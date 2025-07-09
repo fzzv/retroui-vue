@@ -2,8 +2,8 @@ import type { InjectionKey, Ref } from 'vue'
 import type { Locale, Messages } from '../types/locale'
 import { createSharedComposable } from '@vueuse/core'
 import { computed, inject, toRef } from 'vue'
-import { buildLocaleContext } from '@/lib/locale'
-import en from '@/locale/en'
+import en from '../locale/en'
+import { buildLocaleContext } from '../utils/locale'
 
 /**
  * 语言包上下文注入键
