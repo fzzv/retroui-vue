@@ -1,1 +1,3 @@
 @import 'tailwindcss';
+@import 'retroui-vue/styles';
+@source '../node_modules/retroui-vue';
