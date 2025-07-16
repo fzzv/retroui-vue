@@ -51,8 +51,8 @@ function getIconName(componentName: string) {
               v-for="item in items"
               :key="item.to"
               :to="item.to"
-              class="group flex items-center gap-3 px-3 py-3 rounded-xl shadow-md border-2 border-border text-secondary text-sm font-medium transition-all duration-200 hover:bg-accent/50 hover:text-accent-foreground hover:shadow-sm"
-              active-class="bg-primary text-primary-foreground shadow-md"
+              class="group flex items-center gap-3 px-3 py-3 rounded-xl shadow-md border-2 border-black text-sm font-medium transition-all duration-200 hover:bg-accent/50 hover:text-accent-foreground hover:shadow-sm"
+              active-class="bg-primary text-primary-foreground shadow-md text-black"
             >
               <div class="w-6 h-6 flex items-center justify-center rounded-md bg-background/50 group-[.router-link-exact-active]:bg-primary-foreground/20">
                 <RIcon
