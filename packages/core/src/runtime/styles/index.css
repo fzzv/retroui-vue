@@ -1,9 +1,9 @@
-@import 'tailwindcss';
-
-/* 主题切换 */
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
+  --font-head: var(--font-head);
+  --font-sans: var(--font-sans);
+
   --shadow-xs: 1px 1px 0 0 var(--border);
   --shadow-sm: 2px 2px 0 0 var(--border);
   --shadow: 3px 3px 0 0 var(--border);
@@ -28,11 +28,13 @@
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
-
   --background-image: var(--background-image);
 }
 
 :root {
+  --font-head: 'Archivo Black', sans-serif;
+  --font-sans: 'Space Grotesk', sans-serif;
+
   --background: #fff;
   --foreground: #000;
   --card: #fff;
@@ -49,19 +51,8 @@
   --destructive: #e63946;
   --destructive-foreground: #fff;
   --border: #000;
-
-  --background-image: '';
-  --backdrop-filter-blur: 1px;
-  --background-mask-opacity: 0.1;
-
-  --search-width: 60vw;
-  --search-height: 60px;
-  --search-radius: 1rem;
-  --search-opacity: 1;
-
-  --icon-box-width: 0px;
-  --icon-box-height: 0px;
 }
+
 .dark {
   --background: #000000;
   --foreground: #eaeaea;
@@ -79,4 +70,8 @@
   --destructive: #e63946;
   --destructive-foreground: #fff;
   --border: #eee;
+}
+
+body {
+  font-family: var(--font-sans), serif;
 }
